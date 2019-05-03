@@ -1,10 +1,15 @@
 #include <stdio.h>
+#include "../base.h"
 
-void ordena(int v[], int n) {
-    for(int i = 0; i < n; i++) {
+void ordena(int v[], int n) 
+{
+    for(int i = 0; i < n; i++) 
+    {
         int menor = i;
-        for(int j = i + 1;j<n;j++){
-            if(v[menor] > v[j]){
+        for(int j = i + 1;j<n;j++)
+        {
+            if(v[menor] > v[j])
+            {
                 menor = j;
             }
         }
@@ -14,17 +19,8 @@ void ordena(int v[], int n) {
     }
 }
 
-void printaVetor(int v[], int n) {
-    for(int i = 0; i<n; i++) {
-        printf("%d ", v[i]);
-    }
-}
-
-int main(){
-	
-	int vetor[] = {5,8,12,78,6,45,2,14,4,31};
-	ordena(vetor, 10);
-	printaVetor(vetor,10);
-
-	return 0;
+int main()
+{
+    testePadrao();
+    return 0;
 }

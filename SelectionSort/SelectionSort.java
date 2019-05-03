@@ -1,6 +1,8 @@
-public class SelectionSort {
+public class SelectionSort 
+{
 	
-	public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
 
 		int vetor[] = {15,45,21,87,20,64,8,1,5,10};
 		SelectionSort.ordena(vetor, 10);
@@ -8,9 +10,11 @@ public class SelectionSort {
 	}
 
 	public static void ordena(int v[], int n) {
-		for(int i = 0;i<n;i++){
+        for(int i = 0;i<n;i++)
+        {
             int menor = i;
-            for(int j = i+1; j<n; j++){
+            for(int j = i+1; j<n; j++)
+            {
                 if(v[menor]>v[j]){
                     menor = j;
                 }
@@ -20,9 +24,10 @@ public class SelectionSort {
         }
 	}
 
-	public static void printaVetor(int v[], int n) {
-
-		for(int i = 0; i<n; i++) {
+    public static void printaVetor(int v[], int n) 
+    {
+        for(int i = 0; i<n; i++) 
+        {
 			System.out.println(v[i]);
 		}
 	}
