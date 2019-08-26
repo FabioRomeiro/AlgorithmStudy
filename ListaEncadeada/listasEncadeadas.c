@@ -36,6 +36,26 @@ void removeFinal(CELULA *lst)
 	aux -> proxima = NULL;
 }
 
+void insertionSort(CELULA *lst)
+{
+	CELULA* ordenado = lst->proxima;
+	while(ordenado != NULL)
+	{
+		CELULA* eleito = ordenado->proxima;
+		ordenado->proxima = eleito->proxima;
+		for(CELULA* cabeca = lst; cabeca->proxima != ordenado->proxima ; cabeca = cabeca->proxima)
+		{
+			if((cabeca->proxima)->valor > eleito->valor)
+			{
+				CELULA* temp = cabeca->proxima;
+				cabeca->proxima = eleito;
+				eleito->proxima = temp;
+				free(temp)
+			}
+		}
+	}
+}
+
 void printaLista(CELULA* lst)
 {
 	CELULA* aux = lst;
